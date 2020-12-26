@@ -12,7 +12,7 @@ object Scramble {
 		if(text.length == 1) {
 			text :: Nil
 		} else {
-			text.indices.flatMap(idx => scrambleText(text.patch(idx, Nil, 1)).map(tail => s"${text(idx)}$tail")).toList
+			text.indices.flatMap(idx => scrambleText(text.patch(idx, Nil, 1)).map(tail => s"${text(idx)}$tail")).toList.distinct
 		}
 	}
 
